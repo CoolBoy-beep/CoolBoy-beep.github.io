@@ -14601,7 +14601,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>泰国航空市场规模巨大，2019年，泰国国际旅客人数达到了3950万人次，其中曼谷素万那普国际机场的国际旅客人数占比最高，为其总旅客人数的80%以上。此外，泰国的国内航空市场也在不断增长，2019年国内航班运输量为4300万人次左右。泰国目前所引人关注的三大航空公司有 BangkokAirways、ThaiSmile和AirAsia三大航空公司，如<a href="https://github.com/CoolBoy-beep/CoolBoy-beep.github.io/blob/main/Thai_planeline.html">泰国航空市场布局图</a>所示。</p>
+<p>泰国航空市场规模巨大，2019年，泰国国际旅客人数达到了3950万人次，其中曼谷素万那普国际机场的国际旅客人数占比最高，为其总旅客人数的80%以上。此外，泰国的国内航空市场也在不断增长，2019年国内航班运输量为4300万人次左右。泰国目前所引人关注的三大航空公司有 BangkokAirways、ThaiSmile和AirAsia三大航空公司，如<a href="http://coolboy-beep.github.io/Thai_planeline.html">泰国航空市场布局图</a>所示。</p>
 
 </div>
 </div>
@@ -14643,6 +14643,291 @@ BangkokAirways 及 ThaiSmile 三大航空公司除了争夺高收入人群之外
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E4%BD%9C%E5%9B%BE%E4%BB%A3%E7%A0%81%E5%B1%95%E7%A4%BA">&#20316;&#22270;&#20195;&#30721;&#23637;&#31034;<a class="anchor-link" href="#%E4%BD%9C%E5%9B%BE%E4%BB%A3%E7%A0%81%E5%B1%95%E7%A4%BA">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Date: 2021.3.22</span>
+<span class="sd">Author: Justin</span>
+
+<span class="sd">要点说明：</span>
+<span class="sd">Geo 地理坐标系。</span>
+<span class="sd">在地图上添加一个坐标点，以经纬度标记</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">pyecharts</span> <span class="kn">import</span> <span class="n">options</span> <span class="k">as</span> <span class="n">opts</span>
+<span class="kn">from</span> <span class="nn">pyecharts.charts</span> <span class="kn">import</span> <span class="n">Geo</span>
+<span class="kn">from</span> <span class="nn">pyecharts.globals</span> <span class="kn">import</span> <span class="n">ChartType</span><span class="p">,</span> <span class="n">SymbolType</span><span class="p">,</span> <span class="n">GeoType</span>
+
+<span class="n">geo</span> <span class="o">=</span> <span class="n">Geo</span><span class="p">()</span>
+
+<span class="c1"># 新增坐标点的函数，添加名称跟经纬度</span>
+<span class="c1"># add_coordinate(</span>
+<span class="c1">#    name: str, # 坐标地点名称</span>
+<span class="c1">#    longitude: Numeric, # 经度</span>
+<span class="c1">#    latitude: Numeric, # 纬度</span>
+<span class="c1"># )</span>
+
+<span class="c1"># 可以在网上查找城市的经纬度，然后根据经纬度在地图库中添加坐标点</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Los Angeles&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=-</span><span class="mf">118.15</span><span class="p">,</span> 
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">34.04</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">98.4462684</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">18.6951714</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">100.4935089</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">13.7524938</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">98.3529292</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">7.9366015</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">99.1097298</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">8.1111653</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lampang Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">99.7332501</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">18.6799728</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Sukhothai Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">99.4375845</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">17.1446985</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tak Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">98.9953943</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">17.1053568</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Chiang Rai Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">99.6734592</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">19.7589517</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Ubon Ratchathani Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">105.3269544</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">15.1879684</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">102.6680012</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">17.5211917</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">98.830042</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">9.4674663</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Narathiwat Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">101.5972971</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">6.3210758</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Mae Hong Son Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">98.2031112</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">19.3927456</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Ranong Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">98.6870133</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">10.0469546</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Chumphon Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">99.0077685</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">10.3782724</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Nakhon Ratchasima Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">101.9313754</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">15.2241917</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Phitsanulok Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">100.3848239</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">16.9779975</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Trang Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">99.5032004</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">7.5892935</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Sakon Nakhon Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">103.9730898</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">17.1904453</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Loei Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">101.4638277</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">17.3158563</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Nan Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">100.624804</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">18.7544594</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Roi Et Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">103.7013017</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">15.7486448</span>
+    <span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_coordinate</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Buriram Province&quot;</span><span class="p">,</span>
+    <span class="n">longitude</span><span class="o">=</span><span class="mf">102.6453162</span><span class="p">,</span>
+    <span class="n">latitude</span><span class="o">=</span><span class="mf">14.6107101</span>
+    <span class="p">)</span>
+
+<span class="n">geo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="p">[(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="mf">231.73</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span> <span class="mf">5022.02</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span> <span class="mf">209.01</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span> <span class="mf">89.70</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lampang Province&quot;</span><span class="p">,</span> <span class="mf">68.20</span><span class="p">)</span>
+         <span class="p">,(</span><span class="s2">&quot;Sukhothai Province&quot;</span><span class="p">,</span><span class="mf">45.15</span><span class="p">),(</span><span class="s2">&quot;Tak Province&quot;</span><span class="p">,</span><span class="mf">47.80</span><span class="p">),(</span><span class="s2">&quot;Chiang Rai Province&quot;</span><span class="p">,</span><span class="mf">104.44</span><span class="p">),(</span><span class="s2">&quot;Ubon Ratchathani Province&quot;</span><span class="p">,</span><span class="mf">120.49</span><span class="p">),(</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">,</span><span class="mf">111.26</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">,</span><span class="mf">211.05</span><span class="p">),(</span><span class="s2">&quot;Narathiwat Province&quot;</span><span class="p">,</span><span class="mf">42.74</span><span class="p">),(</span><span class="s2">&quot;Mae Hong Son Province&quot;</span><span class="p">,</span><span class="mi">13</span><span class="p">),(</span><span class="s2">&quot;Ranong Province&quot;</span><span class="p">,</span><span class="mf">26.77</span><span class="p">),(</span><span class="s2">&quot;Chumphon Province&quot;</span><span class="p">,</span><span class="mf">79.40</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Nakhon Ratchasima Province&quot;</span><span class="p">,</span><span class="mf">274.90</span><span class="p">),(</span><span class="s2">&quot;Phitsanulok Province&quot;</span><span class="p">,</span><span class="mf">93.05</span><span class="p">),(</span><span class="s2">&quot;Trang Province&quot;</span><span class="p">,</span><span class="mf">73.20</span><span class="p">),(</span><span class="s2">&quot;Sakon Nakhon Province&quot;</span><span class="p">,</span><span class="mf">55.63</span><span class="p">),(</span><span class="s2">&quot;Loei Province&quot;</span><span class="p">,</span><span class="mf">52.67</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Nan Province&quot;</span><span class="p">,</span><span class="mf">31.31</span><span class="p">),(</span><span class="s2">&quot;Roi Et Province&quot;</span><span class="p">,</span><span class="mf">73.48</span><span class="p">),(</span><span class="s2">&quot;Buriram Province&quot;</span><span class="p">,</span><span class="mf">84.33</span><span class="p">)],</span>
+        <span class="n">type_</span><span class="o">=</span><span class="n">ChartType</span><span class="o">.</span><span class="n">EFFECT_SCATTER</span><span class="p">)</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add_schema</span><span class="p">(</span>
+            <span class="n">maptype</span><span class="o">=</span><span class="s2">&quot;泰国&quot;</span><span class="p">,</span>
+            <span class="n">itemstyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">ItemStyleOpts</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">border_color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">))</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="s2">&quot;BangkokAirways&quot;</span><span class="p">,</span>
+        <span class="p">[(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span> <span class="s2">&quot;Krabi Province&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span> <span class="s2">&quot;Phuket Province&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span> <span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Lampang Province&quot;</span><span class="p">,</span> <span class="s2">&quot;Phuket Province&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lampang Province&quot;</span><span class="p">,</span> <span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Sukhothai Province&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Sukhothai Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Lampang Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Sukhothai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Tak Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">)],</span>
+         <span class="c1">#连线方向参数是由元组项组成的列表</span>
+        <span class="n">type_</span><span class="o">=</span><span class="n">ChartType</span><span class="o">.</span><span class="n">LINES</span><span class="p">,</span>
+        <span class="n">effect_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">EffectOpts</span><span class="p">(</span>
+            <span class="n">symbol</span><span class="o">=</span><span class="n">SymbolType</span><span class="o">.</span><span class="n">ARROW</span><span class="p">,</span> <span class="n">symbol_size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgreen&quot;</span>
+        <span class="p">),</span>
+        <span class="n">linestyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LineStyleOpts</span><span class="p">(</span><span class="n">curve</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+        <span class="c1"># curve为正时，曲线是凸的；为负时，曲线是凹的</span>
+    <span class="p">)</span>
+
+<span class="n">geo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="s2">&quot;ThaiSmile&quot;</span><span class="p">,</span>
+        <span class="p">[(</span><span class="s2">&quot;Chiang Rai Province&quot;</span><span class="p">,</span> <span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Rai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Ubon Ratchathani Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Ubon Ratchathani Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Narathiwat Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Narathiwat Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Mae Hong Son Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Ranong Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">)],</span>
+         <span class="c1">#连线方向参数是由元组项组成的列表</span>
+        <span class="n">type_</span><span class="o">=</span><span class="n">ChartType</span><span class="o">.</span><span class="n">LINES</span><span class="p">,</span>
+        <span class="n">effect_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">EffectOpts</span><span class="p">(</span>
+            <span class="n">symbol</span><span class="o">=</span><span class="n">SymbolType</span><span class="o">.</span><span class="n">ARROW</span><span class="p">,</span> <span class="n">symbol_size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span>
+        <span class="p">),</span>
+        <span class="n">linestyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LineStyleOpts</span><span class="p">(</span><span class="n">curve</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+        <span class="c1"># curve为正时，曲线是凸的；为负时，曲线是凹的</span>
+    <span class="p">)</span>
+
+<span class="n">geo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="s2">&quot;AirAsia&quot;</span><span class="p">,</span>
+        <span class="p">[(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Narathiwat Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Narathiwat Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Ranong Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Ranong Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุง้ทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Chumphon Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Chumphon Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">,</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">,</span><span class="s2">&quot;Phuket Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Nakhon Ratchasima Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Nakhon Ratchasima Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Rai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Chiang Rai Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Krabi Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Trang Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Trang Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Phitsanulok Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Phitsanulok Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Nakhon Phanom Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Nakhon Phanom Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Ubon Ratchathani Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Ubon Ratchathani Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Udon Thani Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Sakon Nakhon Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Sakon Nakhon Province&quot;</span><span class="p">),(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Buriram Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Buriram Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Loei Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Loei Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Nan Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">,</span><span class="s2">&quot;Nan Province&quot;</span><span class="p">),(</span><span class="s2">&quot;Roi Et Province&quot;</span><span class="p">,</span><span class="s2">&quot;กรุงเทพมหานคร&quot;</span><span class="p">),(</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">,</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;Chiang Mai Province&quot;</span><span class="p">,</span><span class="s2">&quot;Surat Thani Province&quot;</span><span class="p">)],</span>
+         <span class="c1">#连线方向参数是由元组项组成的列表</span>
+        <span class="n">type_</span><span class="o">=</span><span class="n">ChartType</span><span class="o">.</span><span class="n">LINES</span><span class="p">,</span>
+        <span class="n">effect_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">EffectOpts</span><span class="p">(</span>
+            <span class="n">symbol</span><span class="o">=</span><span class="n">SymbolType</span><span class="o">.</span><span class="n">ARROW</span><span class="p">,</span> <span class="n">symbol_size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span>
+        <span class="p">),</span>
+        <span class="n">linestyle_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LineStyleOpts</span><span class="p">(</span><span class="n">curve</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span>
+        <span class="c1"># curve为正时，曲线是凸的；为负时，曲线是凹的</span>
+    <span class="p">)</span>
+
+<span class="n">geo</span><span class="o">.</span><span class="n">set_series_opts</span><span class="p">(</span><span class="n">label_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">LabelOpts</span><span class="p">(</span><span class="n">is_show</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">set_global_opts</span><span class="p">(</span><span class="n">visualmap_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">VisualMapOpts</span><span class="p">(</span><span class="n">max_</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">is_piecewise</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                    <span class="n">title_opts</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">TitleOpts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;泰国三大航空公司的基本路线图&quot;</span><span class="p">))</span>
+<span class="n">geo</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;./Thai_planeline.html&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;C:\\Users\\hp\\Thai_planeline.html&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
