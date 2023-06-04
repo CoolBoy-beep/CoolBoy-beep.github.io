@@ -15570,7 +15570,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 style="text-align: left;">粉丝响应度分析</h2>
+<h2 style="text-align: left;">基于粉丝总评论的情感分析</h2>
 </div>
 </div>
 </div>
@@ -15579,7 +15579,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[393]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[408]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -15606,7 +15606,7 @@ class="
     <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">Y</span><span class="o">+=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;总评论： &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15628,7 +15628,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>270686
+<pre>总评论： 270686
 </pre>
 </div>
 </div>
@@ -15642,7 +15642,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[394]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[409]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;Trysentiment.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -15661,7 +15661,7 @@ class="
     <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
     <span class="n">Y</span><span class="o">+=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s1">&#39;User&#39;</span><span class="p">))</span>
 <span class="c1"># 活跃粉丝</span>
-<span class="n">Y</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;活跃粉丝： &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15679,32 +15679,19 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[394]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>266083</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>活跃粉丝： 266083
+</pre>
 </div>
-
 </div>
 
 </div>
 
 </div>
 
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 style="text-align: left;">基于粉丝总评论的情感分析</h3>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15975,7 +15962,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 style="text-align: left;">粉丝对视频内容的响应度分析</h3>
+<h2 style="text-align: left;">粉丝对视频内容的响应度分析</h2>
 </div>
 </div>
 </div>
@@ -16473,7 +16460,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 style="text-align: left;">基于标题的视频点击率效果提升策略分析</h3>
+<h2 style="text-align: left;">基于标题的视频点击率效果提升策略分析</h2>
 </div>
 </div>
 </div>
@@ -16588,7 +16575,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 style="text-align: left;">结论</h3>
+<h2 style="text-align: left;">结论</h2>
 </div>
 </div>
 </div>
